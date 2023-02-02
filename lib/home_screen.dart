@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           (message) {
         print("FirebaseMessaging.instance.getInitialMessage");
         if (message != null) {
+          NotificationService.createanddisplaynotification(message);
           print("New Notification");
           // if (message.data['_id'] != null) {
           //   Navigator.of(context).push(
@@ -49,7 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
           print(message.notification!.title);
           print(message.notification!.body);
           print("message.data11 ${message.data}");
+
           // LocalNotificationService.display(message);
+          NotificationService.createanddisplaynotification(message);
+
 
         }
       },
@@ -63,6 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
           print(message.notification!.title);
           print(message.notification!.body);
           print("message.data22 ${message.data['_id']}");
+          NotificationService.createanddisplaynotification(message);
+
         }
       },
     );

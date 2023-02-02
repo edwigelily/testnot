@@ -16,7 +16,8 @@ void main() async {
   await Firebase.initializeApp();
   FirebaseMessaging.onBackgroundMessage(backgroundHandler);
   NotificationService.initialize();
-  runApp( MyApp());
+  runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
